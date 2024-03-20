@@ -126,3 +126,54 @@ let studentiSecchioniId = studenti.filter((el) => el.grado > 70 && el.id > 120);
 
 console.log(studentiSecchioni);
 console.log(studentiSecchioniId);
+
+//----------------------------------------------------------------------------------------------------
+
+// creo un array di bici con nome e peso
+
+const bikes = [
+    {
+        nome: 'hiland',
+        peso: 10,
+    },
+
+    {
+        nome: 'galano',
+        peso: 7,
+    },
+
+    {
+        nome: 'mu',
+        peso: 7,
+    },
+
+    {
+        nome: 'kabon',
+        peso: 8,
+    },
+
+    {
+        nome: 'parker',
+        peso: 9,
+    },
+
+    {
+        nome: 'octagon',
+        peso: 6,
+    }
+
+];
+
+// trovare la bici che pesa meno
+
+const bikesCopy = bikes.map((element) =>{
+    return {
+        peso: element.peso,
+    }
+});
+
+console.log(bikesCopy);
+
+
+
+// stamparla in console 
