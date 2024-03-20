@@ -166,14 +166,71 @@ const bikes = [
 
 // trovare la bici che pesa meno
 
-const bikesCopy = bikes.map((element) =>{
-    return {
-        peso: element.peso,
+// const bikesCopy = bikes.map((element) =>{
+//     return element.peso;
+// });
+
+// console.log(bikesCopy);
+
+let pesoMin;
+let indexWithPesoMin;
+
+for (let i = 0; i < bikes.length; i++) {
+    const bike = bikes[i];
+    const { peso } = bike;
+
+    if (i === 0) { // se sono al primo elemento
+        pesoMin = peso;
+        indexWithPesoMin = 0;
+    } else if (peso < pesoMin) {
+        pesoMin = peso;
+        indexWithPesoMin = i;
     }
-});
+}
 
-console.log(bikesCopy);
-
-
-
+console.log(bikes[indexWithPesoMin]);
 // stamparla in console 
+
+//----------------------------------------------------------------------------------
+
+const squadreCalcio = [
+    {
+        nome: 'inter',
+        puntiFati: 0,
+        falliSubiti: 0,
+    },
+
+    {
+        nome: 'milan',
+        puntiFati: 0,
+        falliSubiti: 0,
+    },
+
+    {
+        nome: 'juventus',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+
+    {
+        nome: 'roma',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+
+    {
+        nome: 'napoli',
+        puntiFati: 0,
+        falliSubiti: 0,
+    },
+
+    {
+        nome: 'sassuolo',
+        puntiFati: 0,
+        falliSubiti: 0,
+    },
+
+];
+
+// generare numeri random al posto dei punti e dei falli 
+
