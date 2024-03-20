@@ -196,13 +196,13 @@ console.log(bikes[indexWithPesoMin]);
 const squadreCalcio = [
     {
         nome: 'inter',
-        puntiFati: 0,
+        puntiFatti: 0,
         falliSubiti: 0,
     },
 
     {
         nome: 'milan',
-        puntiFati: 0,
+        puntiFatti: 0,
         falliSubiti: 0,
     },
 
@@ -220,13 +220,13 @@ const squadreCalcio = [
 
     {
         nome: 'napoli',
-        puntiFati: 0,
+        puntiFatti: 0,
         falliSubiti: 0,
     },
 
     {
         nome: 'sassuolo',
-        puntiFati: 0,
+        puntiFatti: 0,
         falliSubiti: 0,
     },
 
@@ -234,3 +234,23 @@ const squadreCalcio = [
 
 // generare numeri random al posto dei punti e dei falli 
 
+for (let i = 0; i < squadreCalcio.length; i++) {
+    const squadraCorrente = squadreCalcio[i];
+    
+    squadraCorrente.puntiFatti = Math.floor(Math.random() *115);
+    squadraCorrente.falliSubiti = Math.floor(Math.random() *80);
+}
+
+console.log(squadreCalcio);
+
+// creo un nuvo array con
+
+const nuovoArraySquadre = squadreCalcio.map((clubs) => {
+    const {nome, falliSubiti} = clubs;
+    return {
+        nome,
+        falliSubiti,
+    }
+});
+
+console.log(nuovoArraySquadre);
