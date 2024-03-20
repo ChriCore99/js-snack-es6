@@ -112,7 +112,11 @@ const studenti = [
 ];
 
 const nomiMaiuscoli = studenti.map((elemento) =>{
-    return elemento.nome.toUpperCase();
+    return {
+        id: elemento.id,
+        nome: elemento.nome.toUpperCase(),
+        grado: elemento.grado,
+    }
 });
 
 console.log(nomiMaiuscoli);
